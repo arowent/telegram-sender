@@ -24,4 +24,5 @@ urlpatterns = [
     # Debug and paths for configuring libraries
     path('__debug__/', include('debug_toolbar.urls')),
     re_path(r'^auth/', include('djoser.urls')),
+    re_path(r'^auth/', include('djoser.urls.authtoken')),
 ]
