@@ -1,1 +1,1 @@
-# telegram-sender
+# telemin
