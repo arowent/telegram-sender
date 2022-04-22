@@ -1,31 +1,22 @@
 <template>
-  <nav>
+  <HomeView/>
+  <!-- <nav>
     <router-link to="/login">Login</router-link>
     <router-link to="/register">Register</router-link>
-  </nav>
+  </nav> -->
   <router-view />
 </template>
 
 <style>
+@import './assets/css/zero.css';
+@import './assets/css/style.css';
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700;900&display=swap');
+
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
-}
-
-nav {
-  /* padding: 30px; */
-}
-
-nav a {
-  font-weight: bold;
-  color: #2c3e50;
-  text-decoration: none;
-}
-
-nav a.router-link-exact-active {
-  color: #42b983;
+  color: #fff;
 }
 </style>
