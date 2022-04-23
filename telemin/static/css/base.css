@@ -1,5 +1,6 @@
 @import url("zero.css");
 
+
 body {
     background-color: #121215;
     font-family: 'Source Sans Pro', sans-serif;
@@ -100,4 +101,117 @@ body {
 .avatar {
     width: 40px;
     border-radius: 50%;
+}
+
+main {
+    margin-top: 20px;
+}
+
+/* -------------------------------*/
+.sidebar {
+    width: max-content;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.sidebar__profile {
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.sidebar__profile > img {
+    margin: 0px;
+    padding: 0px;
+    width: 48px;
+    display: inline-block;
+}
+
+.sidebar__profile__name {
+    margin-left: 15px;
+    display: inline-block;
+    align-items: center;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.sidebar__profile__name > h1 {
+    font-size: 22px;
+    font-weight: bold;
+    /* margin-bottom: 5px; */
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.sidebar__menu {
+    width: 100%;
+    /* background-color: #252427; */
+    display: inline-block;
+    justify-content: flex-start;
+}
+
+.sidebar__list {
+    width: 100%;
+    /* border-bottom: 1px solid rgba(255, 255, 255, 0.1); */
+}
+
+.sidebar__title {
+    color: rgba(255, 255, 255, 0.4);
+    margin: 10px;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.sidebar__item {
+    /* background-color: #35323d; */
+    /* margin-bottom: 5px;
+    padding: 6px 10px;
+    border-radius: 8px;
+    transition-property: background-color, color, border-color;
+    transition-duration: 0.25s, 0.2s, 0.2s;
+    transition-timing-function: ease, ease, ease;
+    transition-delay: 0s, 0s, 0s; */
+    /* margin-bottom: 20px; */
+}
+
+.sidebar__item:hover {
+    /* background-color: rgba(255, 255, 255, 0.1); */
+}
+
+.sidebar__link {
+    display: block;
+    color: rgba(255, 255, 255, 0.7);
+    border-radius: 8px;
+    transition-property: background-color, color, border-color;
+    transition-duration: 0.25s, 0.2s, 0.2s;
+    transition-timing-function: ease, ease, ease;
+    transition-delay: 0s, 0s, 0s;
+    padding: 7px 10px;
+}
+
+.sidebar__link:hover {
+    background-color: rgba(255, 255, 255, 0.03);
+}
+
+.content__posts {
+    display: inline-block;
+    vertical-align: top;
+    width: 60%;
+    margin-left: 200px;
+}
+
+.content__item {
+    background-color: rgba(255, 255, 255, 0.03);
+    display: block;
+    margin-bottom: 15px;
+    padding: 15px 20px;
+    border-radius: 10px;
+}
+
+.item__title {
+    font-size: 18px;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.item__description {
+    margin-top: 10px;
+    color: rgba(255, 255, 255, 0.7);
 }

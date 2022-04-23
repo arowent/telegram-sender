@@ -1,0 +1,34 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{% static 'css/base.css' %}" rel="stylesheet">
+    <link href="{% static 'css/account/login.css' %}" rel="stylesheet">
+    <title>Авторизация</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="login__block">
+            <h1>Авторизация</h1>
+            <div class="login-form">
+                <form action="{% url 'login' %}" method="post">
+                    {% csrf_token %}
+                    {{ form.username }}
+                    {{ form.password }}
+                    <input type="hidden" name="next" value="{{ next }}" />
+                    <input type="submit" value="Вход" class="button__login">
+                </form>
+                <div class="support__block">
+                    <p>Войти с помощью</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

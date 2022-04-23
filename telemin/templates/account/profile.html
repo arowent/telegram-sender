@@ -1,0 +1,51 @@
+{% extends "../base.html" %}
+{% load static %}
+
+{% block content %}
+    <div class="sidebar">
+        <div class="sidebar__profile">
+            <img src="{% static 'img/avatar.png' %}" alt="" class="avatar" />
+            <div class="sidebar__profile__name">
+                <h1>Alexey Lopatko</h1>
+                <p>Your personal account</p>
+            </div>
+        </div>
+        <div class="sidebar__menu">
+            <ul class="sidebar__list">
+                <li class="sidebar__item"><a href="" class="sidebar__link">Public profile</a></li>
+                <li class="sidebar__item"><a href="" class="sidebar__link">Account</a></li>
+                <li class="sidebar__item"><a href="" class="sidebar__link">Appearance</a></li>
+                <li class="sidebar__item"><a href="" class="sidebar__link">Accessibility</a></li>
+                <li class="sidebar__item"><a href="" class="sidebar__link">Notifications</a></li>
+            </ul>
+            <ul class="sidebar__list">
+                <p class="sidebar__title">Access</p>
+                <li class="sidebar__item"><a href="" class="sidebar__link">Billing and plans</a></li>
+                <li class="sidebar__item"><a href="" class="sidebar__link">Emails</a></li>
+                <li class="sidebar__item"><a href="" class="sidebar__link">Password and authentication</a></li>
+                <li class="sidebar__item"><a href="" class="sidebar__link">SSH and GPG keys</a></li>
+                <li class="sidebar__item"><a href="" class="sidebar__link">Organizations</a></li>
+                <li class="sidebar__item"><a href="" class="sidebar__link">Moderation</a></li>
+            </ul>
+            <ul class="sidebar__list">
+                <p class="sidebar__title">Code, planning, and automation </p>
+                <li class="sidebar__item"><a href="" class="sidebar__link">Public profile</a></li>
+                <li class="sidebar__item"><a href="" class="sidebar__link">Account</a></li>
+                <li class="sidebar__item"><a href="" class="sidebar__link">Appearance</a></li>
+                <li class="sidebar__item"><a href="" class="sidebar__link">Accessibility</a></li>
+                <li class="sidebar__item"><a href="" class="sidebar__link">Notifications</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="content__posts">
+        {% for post in posts %}
+            <div class="content__item">
+                <div class="item__header">
+                    <h1 class="item__title">{{ post.title}}</h1>
+                    <p class="item__description">{{ post.description }}</p>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}
+

@@ -1,12 +1,17 @@
 import logging
 import sys
 
-from django.shortcuts import render
+from django.conf import settings
+from django.shortcuts import render, redirect
+from django.contrib import messages
 from django.contrib.auth import authenticate, login
 from django.http import HttpResponse
 from .forms import LoginForm, UserRegistrationForm, UserEditForm, ProfileEditForm
 from django.contrib.auth.decorators import login_required
+from django.contrib.auth.models import User
+
 from .models import Profile
+from blog.models import Post
 
 
 
@@ -20,11 +25,20 @@ def user_login(request):
             if user is not None:
                 if user.is_active:
                     login(request, user)
-                    return HttpResponse('Authenticate successfully')
+                    return redirect('/blog/')
                 else:
                     return HttpResponse('Disable account')
             else:
-                return HttpResponse('Invalid login')
+                messages.error(request, 'Invalid login')
+                # return HttpResponse('Invalid login')
     else:
         form = LoginForm()
     return render(request, 'account/login.html', {'form': form})
+
+
+def get_posts(request):
+    posts = Post.objects.all()
+    context = {
+        'posts': posts,
+    }
+    return render(request, 'account/profile.html', context)
