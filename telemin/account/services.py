@@ -3,8 +3,8 @@ import os
 from django.contrib import messages
 
 # The maximum file size is 5Mb, the size is specified in bytes
-# MAX_SIZE = 5242880
-MAX_SIZE = 2303741
+MAX_SIZE = 5242880
+# MAX_SIZE = 2303741
 
 
 
