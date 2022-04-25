@@ -25,4 +25,3 @@ export default {
 <style>
 @import "../assets/css/base.scss";
 </style>
-rgba(0, 32, 51, 1)

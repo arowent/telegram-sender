@@ -18,9 +18,13 @@
     <div class="header__button">
       <a href="" class="button button_dark">Для разработчиков</a>
     </div>
-    <a href=""><img src="../assets/img/avatar.png" alt="" class="avatar" v-on:click="sd"/></a>
+   <img src="../assets/img/avatar.png" alt="" class="avatar" />
   </div>
 </template>
+
+<script>
+
+</script>
 
 <style scoped>
 </style>
