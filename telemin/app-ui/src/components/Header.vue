@@ -18,13 +18,36 @@
     <div class="header__button">
       <a href="" class="button button_dark">Для разработчиков</a>
     </div>
-   <img src="../assets/img/avatar.png" alt="" class="avatar" />
+    <img src="../assets/img/avatar.png" alt="" class="avatar" />
+    <Dropdown title="Services" :items="services"/>
   </div>
 </template>
 
 <script>
+import Dropdown from "./Dropdown.vue";
 
+export default {
+  name: "Header",
+  components: {
+    Dropdown,
+  },
+  data () {
+    return {
+      services:[
+        {
+          title: 'Web',
+          link: '#'
+        },
+        {
+          title: 'Design',
+          link: '#'
+        }
+      ]
+    }
+  }
+}
 </script>
 
-<style scoped>
+<style scoped lang="scss">
+
 </style>
