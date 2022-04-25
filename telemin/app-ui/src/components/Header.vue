@@ -1,10 +1,7 @@
-{% extends "index.html" %}
-
-{% block header %}
-<header class="header">
+<template>
   <div class="header__container">
     <a href="." class="header__logo">
-      <img src="{% static 'img/yandex_logo.svg' %}" alt="Логотип" />
+      <img src="../assets/img/yandex_logo.svg" alt="Логотип" />
     </a>
     <nav class="header__menu menu">
       <ul class="menu__list">
@@ -21,9 +18,9 @@
     <div class="header__button">
       <a href="" class="button button_dark">Для разработчиков</a>
     </div>
-    <a href=""
-      ><img src="{% static 'img/avatar.png' %}" alt="" class="avatar"
-    /></a>
+    <a href=""><img src="../assets/img/avatar.png" alt="" class="avatar" v-on:click="sd"/></a>
   </div>
-</header>
-{% endblock %}
+</template>
+
+<style scoped>
+</style>
