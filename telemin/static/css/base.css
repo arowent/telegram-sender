@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+    --background-color-light: #f7f8fb;
+    --text-primary: rgba(0, 32, 51, 1);
+    --text_size_m: 15px;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: var(--background-color-light);
+    font-size: var(--text_size_m);
+}
+
+.btn__link {
+    background-color: rgba(92, 121, 177, 0.16);
+    padding: 10px 17px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: rgba(0, 32, 51, 0.8);
+    transition: background-color .25s ease, color .2s ease;
+}
+
+.btn__link:hover {
+    color: rgba(0, 32, 51, 0.8);
+    background-color: rgba(92, 121, 177, 0.22);
+}
